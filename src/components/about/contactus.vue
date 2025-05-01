@@ -401,7 +401,7 @@ export default {
       const response = await this.axios.get(
         `${process.env.VUE_APP_API}/c_configs/2`
       );
-      console.log("news", response.data.data);
+      // console.log("news", response.data.data);
       this.items = response.data.data;
     },
     gotodetail(id) {

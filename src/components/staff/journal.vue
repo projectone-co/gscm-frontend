@@ -494,7 +494,7 @@ export default {
       this.search1 = "";
       this.search2 = "";
 
-      console.log(this.search1);
+      // console.log(this.search1);
       const pathParam = this.tabs.find((obj) => obj.id == val).slug;
       history.pushState({}, "", `/journal/${pathParam}`);
       if (val == 1) {
@@ -519,14 +519,14 @@ export default {
     },
     onKeydown1(event) {
       if (event.key === "Enter") {
-        console.log("onKeydown1", event);
+        // console.log("onKeydown1", event);
         this.handleSearch1();
         event.preventDefault();
       }
     },
     onKeydown2(event) {
       if (event.key === "Enter") {
-        console.log("onKeydown2", event);
+        // console.log("onKeydown2", event);
         this.handleSearch2();
         event.preventDefault();
       }
@@ -546,11 +546,11 @@ export default {
             item.name_th.toLowerCase().includes(this.search1.toLowerCase()) ||
             item.name_en.toLowerCase().includes(this.search1.toLowerCase())
         );
-        console.log("filterTH", filterTH);
+        // console.log("filterTH", filterTH);
 
         this.items1 = [];
         this.items1 = filterTH;
-        console.log("this.items1", this.items1);
+        // console.log("this.items1", this.items1);
       }
       // this.offset = 1;
       // this.getAll();
@@ -564,11 +564,11 @@ export default {
             item.name_th.toLowerCase().includes(this.search2.toLowerCase()) ||
             item.name_en.toLowerCase().includes(this.search2.toLowerCase())
         );
-        console.log("filterTH", filterTH);
+        // console.log("filterTH", filterTH);
 
         this.items2 = [];
         this.items2 = filterTH;
-        console.log("this.items2", this.items2);
+        // console.log("this.items2", this.items2);
       }
       // this.offset = 1;
       // this.getAll();
@@ -585,7 +585,7 @@ export default {
       return moment(val).format("MM/DD/YYYY hh:mm");
     },
     async getAll() {
-      console.log("store", this.$store.state.lang);
+      // console.log("store", this.$store.state.lang);
       this.items1 = [];
       this.items2 = [];
       if (this.$store.state.lang == "th") {
@@ -598,7 +598,7 @@ export default {
             this.search1 ? "&name_th=" + this.search1 : ""
           }`
         );
-        console.log("items1", response.data.data);
+        // console.log("items1", response.data.data);
         this.itemsAll1 = response.data.data;
         // this.items1 = response.data.data;
         this.items1 =
@@ -606,7 +606,7 @@ export default {
             ? [...this.items1, ...response.data.data]
             : response.data.data;
 
-        console.log("this.search2 ", this.search2);
+        // console.log("this.search2 ", this.search2);
         const response2 = await this.axios.get(
           `${
             process.env.VUE_APP_API
@@ -616,7 +616,7 @@ export default {
             this.search2 ? "&name_th=" + this.search2 : ""
           }`
         );
-        console.log("items2", response2.data.data);
+        // console.log("items2", response2.data.data);
         this.itemsAll2 = response2.data.data;
         // this.items2 = response2.data.data;
         this.items2 =
@@ -636,14 +636,14 @@ export default {
             this.search1 ? "&name_en=" + this.search1 : ""
           }`
         );
-        console.log("items1", response.data.data);
+        // console.log("items1", response.data.data);
         // this.items1 = response.data.data;
         this.items1 =
           this.offset > 1
             ? [...this.items1, ...response.data.data]
             : response.data.data;
 
-        console.log("this.search2 ", this.search2);
+        // console.log("this.search2 ", this.search2);
         const response2 = await this.axios.get(
           `${
             process.env.VUE_APP_API
@@ -653,7 +653,7 @@ export default {
             this.search2 ? "&name_en=" + this.search2 : ""
           }`
         );
-        console.log("items2", response2.data.data);
+        // console.log("items2", response2.data.data);
         // this.items2 = response2.data.data;
         this.items2 =
           this.offset2 > 1

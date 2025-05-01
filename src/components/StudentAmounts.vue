@@ -137,7 +137,7 @@ export default {
       const response = await this.axios.get(
         `${process.env.VUE_APP_API}/c_configs/2`
       );
-      console.log("response", response);
+      // console.log("response", response);
       this.form = response.data.data;
     },
   },

@@ -126,11 +126,11 @@ export default {
       const response = await this.axios.get(
         `${process.env.VUE_APP_API}/news?type=5&status=เปิดใช้งาน`
       );
-      console.log("news", response.data.data);
+      // console.log("news", response.data.data);
       this.items = response.data.data;
     },
     gotoarticle(id) {
-      console.log("id", id);
+      // console.log("id", id);
       // this.$router.push("alumniarticle");
       window.open(`alumninews/${id}`, "_blank");
     },

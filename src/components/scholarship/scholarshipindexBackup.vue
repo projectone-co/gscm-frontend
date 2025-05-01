@@ -522,7 +522,7 @@ export default {
     } else {
       this.newstype = "1";
     }
-    console.log("this.newstype", this.newstype);
+    // console.log("this.newstype", this.newstype);
     this.getAll();
   },
   watch: {
@@ -629,11 +629,11 @@ export default {
             ];
           });
 
-          console.log("result1", result1);
+          // console.log("result1", result1);
         }
       });
 
-      console.log("this.items", this.items);
+      // console.log("this.items", this.items);
       // https://gscm-service.yuzudigital.com/scholarships/65
     },
     gotodetail(id) {

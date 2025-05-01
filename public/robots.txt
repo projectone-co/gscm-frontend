@@ -10,8 +10,8 @@ Disallow: /upload
 Disallow: /information
 Disallow: /~chutisant/*
 Disallow: /2014
-Disallow: *.php
-Disallow: *.src
-Disallow: *.html
+Disallow: *.php$
+Disallow: *.src$
+Disallow: *.html$
  
 Sitemap: https://www.gscm.nida.ac.th/sitemap.xml

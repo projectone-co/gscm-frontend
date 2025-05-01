@@ -594,7 +594,7 @@ export default {
   // examScheduleItems
   methods: {
     setTitleCalendar() {
-      console.log("this.$refs.calendar", this.$refs.calendar);
+      // console.log("this.$refs.calendar", this.$refs.calendar);
       const thaiMonthNames1 = [
         "มกราคม",
         "กุมภาพันธ์",
@@ -641,7 +641,7 @@ export default {
       }
     },
     handleMenuClose(event) {
-      console.log("event 123", event);
+      // console.log("event 123", event);
       // this.showEvent();
     },
     async getAllCalendarItems() {
@@ -785,12 +785,12 @@ export default {
         "December",
       ];
 
-      console.log("this.$refs.calendar", this.$refs.calendar);
+      // console.log("this.$refs.calendar", this.$refs.calendar);
 
       let checkMonth = moment(this.$refs.calendar.lastEnd.date).format("MM");
       let checkYears = new Date(this.$refs.calendar.lastEnd.date).getFullYear();
-      console.log("checkMonth", checkMonth);
-      console.log("checkYears", checkYears);
+      // console.log("checkMonth", checkMonth);
+      // console.log("checkYears", checkYears);
       const strippedNumber1 = checkMonth.replace(/^0+/, "");
       if (this.$store.state.lang == "th") {
         this.monthHeader = thaiMonthNames1[strippedNumber1 - 1];
@@ -809,8 +809,8 @@ export default {
           requestAnimationFrame(() => (this.selectedOpen = true))
         );
       };
-      console.log("selectedElement", this.selectedElement);
-      console.log("nativeEvent", nativeEvent);
+      // console.log("selectedElement", this.selectedElement);
+      // console.log("nativeEvent", nativeEvent);
 
       if (this.selectedOpen) {
         this.selectedOpen = false;

@@ -418,7 +418,7 @@ export default {
       this.search1 = "";
       this.search2 = "";
 
-      console.log(this.search1);
+      // console.log(this.search1);
       const pathParam = this.tabs.find((obj) => obj.id == val).slug;
       history.pushState({}, "", `/conference/${pathParam}`);
       if (val == 1) {
@@ -466,7 +466,7 @@ export default {
           // }&limit=${this.limit}${this.search1 ? "&name_th=" + this.search1 : ""}`
           `${process.env.VUE_APP_API}/academicJournals?type_th=งานประชุมวิชาการ&name_th=${this.search1}`
         );
-        console.log("items1", response.data.data);
+        // console.log("items1", response.data.data);
         // this.items1 = response.data.data;
         this.items1 =
           this.offset > 1
@@ -476,7 +476,7 @@ export default {
         const response = await this.axios.get(
           `${process.env.VUE_APP_API}/academicJournals?type_th=งานประชุมวิชาการ`
         );
-        console.log("items1", response.data.data);
+        // console.log("items1", response.data.data);
         // this.items1 = response.data.data;
         this.items1 =
           this.offset > 1
@@ -484,7 +484,7 @@ export default {
             : response.data.data;
       }
 
-      console.log("this.search2 ", this.search2);
+      // console.log("this.search2 ", this.search2);
       if (this.search2) {
         const response2 = await this.axios.get(
           // `${
@@ -494,7 +494,7 @@ export default {
           // }&limit=${this.limit2}${this.search2 ? "&name_th=" + this.search2 : ""}`
           `${process.env.VUE_APP_API}/academicJournals?type_th=งานประชุมวิชาการ_inter&name_th=${this.search2}`
         );
-        console.log("items2", response2.data.data);
+        // console.log("items2", response2.data.data);
         // this.items2 = response2.data.data;
         this.items2 =
           this.offset2 > 1
@@ -509,7 +509,7 @@ export default {
           // }&limit=${this.limit2}${this.search2 ? "&name_th=" + this.search2 : ""}`
           `${process.env.VUE_APP_API}/academicJournals?type_th=งานประชุมวิชาการ_inter`
         );
-        console.log("items2", response2.data.data);
+        // console.log("items2", response2.data.data);
         // this.items2 = response2.data.data;
         this.items2 =
           this.offset2 > 1
@@ -524,7 +524,7 @@ export default {
       this.$router.push(`/conference-howto`);
     },
     gotodetail(item) {
-      console.log("itemitem", item);
+      // console.log("itemitem", item);
       const pathParam = this.tabs.find(
         (obj) => obj.id == this.selectedtab
       ).slug;

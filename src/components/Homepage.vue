@@ -514,14 +514,14 @@ export default {
   },
   created() {
     if (Object.prototype.hasOwnProperty.call(localStorage, "Lang")) {
-      console.log('localStorage.getItem("Lang")', localStorage.getItem("Lang"));
+      // console.log('localStorage.getItem("Lang")', localStorage.getItem("Lang"));
       this.$store.commit("setLang", localStorage.getItem("Lang"));
       this.$i18n.locale = localStorage.getItem("Lang");
     }
 
     window.scrollTo(0, 0);
     this.Navigator = this.NavigatorDefaut;
-    console.log(this.$i18n.locale);
+    // console.log(this.$i18n.locale);
     // var checkuser = JSON.parse(
     //   Decode.decode(localStorage.getItem("userBebraveWeb"))
     // );
@@ -545,8 +545,8 @@ export default {
       const response = await this.axios.get(
         `${process.env.VUE_APP_API}/serviceSystemStudents`
       );
-      console.log("getStudentSystem", response.data.data[0]);
-      console.log("NAVBAR_CONTENT", NAVBAR_CONTENT[1].items[3]);
+      // console.log("getStudentSystem", response.data.data[0]);
+      // console.log("NAVBAR_CONTENT", NAVBAR_CONTENT[1].items[3]);
       if (response.data.data[0].login_link) {
         NAVBAR_CONTENT[1].items[3].push({
           title: "studentLogin",
@@ -594,7 +594,7 @@ export default {
         `${process.env.VUE_APP_API}/courses?status=เปิดใช้งาน`
         // 'http://localhost:8081/types/'
       );
-      console.log("getAllCourse Header", response.data.data);
+      // console.log("getAllCourse Header", response.data.data);
       this.items = response.data.data;
       // this.imgUrl = response.data.data.imgUrl;
       // for (let i in this.items) {
@@ -626,10 +626,10 @@ export default {
         });
       });
 
-      console.log(this.NAVBAR_CONTENT);
+      // console.log(this.NAVBAR_CONTENT);
     },
     handleEnter(e) {
-      console.log(e.key);
+      // console.log(e.key);
       if (e.key === "Enter") {
         this.handleSearch();
       }
@@ -652,7 +652,7 @@ export default {
       let value = e.target.value;
       this.$store.commit("setLang", value);
       localStorage.setItem("Lang", value);
-      console.log(value);
+      // console.log(value);
       this.$i18n.locale = value;
     },
     goTosearch() {
@@ -697,13 +697,13 @@ export default {
       );
     },
     openKeys(val) {
-      console.log("openKeys", val);
+      // console.log("openKeys", val);
     },
     handleClick(e) {
-      console.log("click", e);
+      // console.log("click", e);
     },
     titleClick(e) {
-      console.log("titleClick", e);
+      // console.log("titleClick", e);
     },
     async ChangePage(val) {
       // // console.log('เข้า ChangePage', val)
@@ -713,7 +713,7 @@ export default {
       }
     },
     CheckHeader(val) {
-      console.log("check Header");
+      // console.log("check Header");
       this.Header = val;
     },
     Logout() {

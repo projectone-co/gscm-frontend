@@ -2004,7 +2004,7 @@ export default {
       this.selectedtab = this.mapTypes[this.$route.params.id];
     }
     this.getAll();
-    console.log("sdsdsdsd");
+    // console.log("sdsdsdsd");
   },
   watch: {
     newstype(val) {
@@ -2022,7 +2022,7 @@ export default {
     },
     selectedtab(val) {
       if (val == 2) {
-        console.log("123123");
+        // console.log("123123");
         this.selectedbtn = 1;
       }
       const pathParam = Object.entries(this.mapTypes)
@@ -2043,7 +2043,7 @@ export default {
       window.open(`https://entrance.nida.ac.th/`, "_blank");
     },
     onClickTab() {
-      console.log("Click Tab", this.selectedtab);
+      // console.log("Click Tab", this.selectedtab);
     },
     async getAll() {
       const response = await this.axios.get(
@@ -2068,14 +2068,14 @@ export default {
       //   // ];
       // });
 
-      console.log(this.items, "this.items");
+      // console.log(this.items, "this.items");
 
       const responseDoc = await this.axios.get(
         `${process.env.VUE_APP_API}/enrolls?levelId=${
           this.selectedtab == 1 ? "12&semesterCourse=ภาคพิเศษ" : "13"
         }`
       );
-      console.log(responseDoc.data.data, "responseDoc");
+      // console.log(responseDoc.data.data, "responseDoc");
       this.itemsEP = responseDoc.data.data;
     },
     gotodetail(id) {

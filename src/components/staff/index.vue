@@ -210,14 +210,14 @@ export default {
       const response = await this.axios.get(
         `${process.env.VUE_APP_API}/teacherDetails?types=1`
       );
-      console.log("teacherDetails", response.data.data);
+      // console.log("teacherDetails", response.data.data);
       this.teachers = response.data.data;
       this.teachers.reverse();
 
       const responseStaff = await this.axios.get(
         `${process.env.VUE_APP_API}/teacherDetails?types=2`
       );
-      console.log("teacherDetails", responseStaff.data.data);
+      // console.log("teacherDetails", responseStaff.data.data);
       this.staffs = responseStaff.data.data;
       this.staffs.reverse();
     },

@@ -130,7 +130,7 @@ export default {
       const response = await this.axios.get(
         `${process.env.VUE_APP_API}/banners`
       );
-      console.log("banners", response.data.data);
+      // console.log("banners", response.data.data);
       this.items = response.data.data;
       this.items.forEach((element) => {
         this.banners.push({ id: element.id, src: element.img_url });
@@ -142,11 +142,11 @@ export default {
       }else{
         this.model--;
       }
-      console.log(this.model);
+      // console.log(this.model);
     },
     next() {
       this.model++;
-      console.log(this.model);
+      // console.log(this.model);
     },
   },
 };

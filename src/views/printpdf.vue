@@ -833,12 +833,11 @@ export default {
   },
   created() {
     var user = JSON.parse(Decode.decode(localStorage.getItem("userBebraveWeb")));
-    console.log("user", user);
-    Bannerdata;
+    // console.log("user", user);
     var Bannerdata = JSON.parse(
       Decode.decode(localStorage.getItem("Bannerdata"))
     );
-    console.log("Bannerdata", Bannerdata);
+    // console.log("Bannerdata", Bannerdata);
     this.id = Bannerdata.id;
     this.getOne();
   },
@@ -926,7 +925,7 @@ export default {
       );
       const data = response.data.data;
 
-      console.log("response", response.data.data);
+      // console.log("response", response.data.data);
       this.locations = data.locations;
       this.reportDrugs = data.reportDrugs;
       this.reportImages = data.reportImages;
@@ -958,7 +957,7 @@ export default {
       var user = JSON.parse(
         Decode.decode(localStorage.getItem("userBebraveWeb"))
       );
-      console.log(user);
+      // console.log(user);
       const auth = {
         headers: { Authorization: `Bearer ${user.token}` },
       };

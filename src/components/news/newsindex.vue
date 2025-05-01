@@ -212,7 +212,7 @@ export default {
     } else {
       this.newstype = "1";
     }
-    console.log("this.newstype", this.newstype);
+    // console.log("this.newstype", this.newstype);
     this.getAll();
   },
   watch: {
@@ -279,7 +279,7 @@ export default {
       const response = await this.axios.get(
         `${process.env.VUE_APP_API}/news?type=${this.newstype}&status=เปิดใช้งาน`
       );
-      console.log("news", response.data.data);
+      // console.log("news", response.data.data);
       this.items = response.data.data;
     },
     gotodetail(item) {
@@ -292,7 +292,7 @@ export default {
       // this.$router.push(`/newsdetail?id=${id}&type=${this.newstype}`);
       // window.open(`/news/${pathParam}/${id}`, "_blank");
 
-      console.log("item", item);
+      // console.log("item", item);
       let id = item.id;
       let title_en = item.url_seo_th
         ? item.url_seo_th
@@ -305,10 +305,10 @@ export default {
       let modifiedUrl = title_en.replace(/ /g, "_");
 
       let filterItem = this.items.filter((x) => x.id === id);
-      console.log("filterItem", filterItem);
+      // console.log("filterItem", filterItem);
       this.checkCharacterType(filterItem[0].url_seo_th);
 
-      console.log(modifiedUrl);
+      // console.log(modifiedUrl);
 
       if (this.isEnglish) {
         window.open(`/news/${pathParam}/${modifiedUrl}`, "_blank");
@@ -317,7 +317,7 @@ export default {
       }
     },
     handleScroll() {
-      console.log("window.pageYOffset", window.pageYOffset);
+      // console.log("window.pageYOffset", window.pageYOffset);
       this.pageYOffset = window.pageYOffset;
       if (window.pageYOffset > 60) {
         // ซ่อน banner เปิด nav ควร 60

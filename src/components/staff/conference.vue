@@ -402,7 +402,7 @@ export default {
   },
   created() {
     window.addEventListener("scroll", this.handleScroll);
-    console.log("this.$route", this.$route.params.type);
+    // console.log("this.$route", this.$route.params.type);
     this.selectedtab = this.$route.params.type === "national" ? 1 : 2;
     // this.selectedtab = this.$route.path.includes("national") ? 1 : 2;
   },
@@ -422,7 +422,7 @@ export default {
       this.search1 = "";
       this.search2 = "";
 
-      console.log(this.search1);
+      // console.log(this.search1);
       const pathParam = this.tabs.find((obj) => obj.id == val).slug;
       history.pushState({}, "", `/conference/${pathParam}`);
       if (val == 1) {
@@ -471,7 +471,7 @@ export default {
           `${process.env.VUE_APP_API}/academicJournals?publisher_th=ประกาศประชุมวิชาการระดับชาติ&name_th=${this.search1}`
           // `${process.env.VUE_APP_API}/academicJournals?publisher_th=ประกาศประชุมวิชาการระดับชาติ`
         );
-        console.log("items1", response.data.data);
+        // console.log("items1", response.data.data);
         // this.items1 = response.data.data;
         this.items1 =
           this.offset > 1
@@ -482,7 +482,7 @@ export default {
           `${process.env.VUE_APP_API}/academicJournals?publisher_th=ประกาศประชุมวิชาการระดับชาติ`
           // `${process.env.VUE_APP_API}/academicJournals?publisher_th=ประกาศประชุมวิชาการระดับชาติ`
         );
-        console.log("items1", response.data.data);
+        // console.log("items1", response.data.data);
         // this.items1 = response.data.data;
         this.items1 =
           this.offset > 1
@@ -490,7 +490,7 @@ export default {
             : response.data.data;
       }
 
-      console.log("this.search2 ", this.search2);
+      // console.log("this.search2 ", this.search2);
       if (this.search2) {
         const response2 = await this.axios.get(
           // `${
@@ -501,7 +501,7 @@ export default {
           `${process.env.VUE_APP_API}/academicJournals?publisher_th=ประกาศประชุมวิชาการระดับนานาชาติ&name_th=${this.search2}`
           // `${process.env.VUE_APP_API}/academicJournals?publisher_th=ประกาศประชุมวิชาการระดับนานาชาติ`
         );
-        console.log("items2", response2.data.data);
+        // console.log("items2", response2.data.data);
         // this.items2 = response2.data.data;
         this.items2 =
           this.offset2 > 1
@@ -517,7 +517,7 @@ export default {
           // `${process.env.VUE_APP_API}/academicJournals?type_th=งานประชุมวิชาการ_inter`
           `${process.env.VUE_APP_API}/academicJournals?publisher_th=ประกาศประชุมวิชาการระดับนานาชาติ`
         );
-        console.log("items2", response2.data.data);
+        // console.log("items2", response2.data.data);
         // this.items2 = response2.data.data;
         this.items2 =
           this.offset2 > 1
@@ -532,7 +532,7 @@ export default {
       this.$router.push(`/conference-howto`);
     },
     gotodetail(item) {
-      console.log("itemitem", item);
+      // console.log("itemitem", item);
       const pathParam = this.tabs.find(
         (obj) => obj.id == this.selectedtab
       ).slug;

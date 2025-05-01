@@ -237,9 +237,9 @@ export default {
         params,
         auth
       );
-      console.log("response", response);
+      // console.log("response", response);
       this.token = response.data.result.token;
-      console.log("token", this.token);
+      // console.log("token", this.token);
       if (response.data.code === "000") {
         this.OTPpass = true;
       } else if (this.phone == "") {
@@ -274,13 +274,13 @@ export default {
         token: this.token,
         otp_code: this.otp_code,
       };
-      console.log("param", params);
+      // console.log("param", params);
       const response = await this.axios.post(
         `https://portal-otp.smsmkt.com/api/otp-validate`,
         params,
         auth
       );
-      console.log("verify otp success", response);
+      // console.log("verify otp success", response);
       if (response.data.code === "000") {
         await this.$swal.fire({
           showConfirmButton: false,

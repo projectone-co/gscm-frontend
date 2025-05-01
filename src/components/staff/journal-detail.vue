@@ -96,7 +96,7 @@ export default {
       const response = await this.axios.get(
         `${process.env.VUE_APP_API}/academicJournals/${this.$route.params.id}`
       );
-      console.log("news", response.data.data);
+      // console.log("news", response.data.data);
       this.itemDetail = response.data.data;
     },
     gotodetail(id) {

@@ -454,7 +454,7 @@ export default {
       if (item.typeSearch == "Awards") {
         item.pathPic.unshift({ path: item.img_url });
         this.selectedAward = item;
-        console.log("this.selectedAward", this.selectedAward);
+        // console.log("this.selectedAward", this.selectedAward);
         this.dialogAward = true;
       }
 
@@ -481,7 +481,7 @@ export default {
       const responseCourse = await this.axios.get(
         `${process.env.VUE_APP_API}/courses?searchGlobal=${this.search}`
       );
-      console.log("responseCourse", responseCourse.data.data);
+      // console.log("responseCourse", responseCourse.data.data);
       if (responseCourse.data.data) {
         this.result = true;
         responseCourse.data.data.forEach((element) => {
@@ -501,7 +501,7 @@ export default {
       const responseEnroll = await this.axios.get(
         `${process.env.VUE_APP_API}/enrolls?searchGlobal=${this.search}`
       );
-      console.log("responseEnroll", responseEnroll.data.data);
+      // console.log("responseEnroll", responseEnroll.data.data);
       if (responseEnroll.data.data) {
         this.result = true;
         responseEnroll.data.data.forEach((element) => {
@@ -521,7 +521,7 @@ export default {
       const responseScholarship = await this.axios.get(
         `${process.env.VUE_APP_API}/scholarships?searchGlobal=${this.search}`
       );
-      console.log("responseScholarship", responseScholarship.data.data);
+      // console.log("responseScholarship", responseScholarship.data.data);
       if (responseScholarship.data.data) {
         this.result = true;
         responseScholarship.data.data.forEach((element) => {
@@ -541,7 +541,7 @@ export default {
       const responseCarlendars = await this.axios.get(
         `${process.env.VUE_APP_API}/carlendars?searchGlobal=${this.search}`
       );
-      console.log("responseCarlendars", responseCarlendars.data.data);
+      // console.log("responseCarlendars", responseCarlendars.data.data);
       if (responseCarlendars.data.data) {
         this.result = true;
         responseCarlendars.data.data.forEach((element) => {
@@ -560,7 +560,7 @@ export default {
       const responseFilesStudents = await this.axios.get(
         `${process.env.VUE_APP_API}/downloadFilesStudents?searchGlobal=${this.search}`
       );
-      console.log("responseFilesStudents", responseFilesStudents.data.data);
+      // console.log("responseFilesStudents", responseFilesStudents.data.data);
       if (responseFilesStudents.data.data) {
         this.result = true;
         responseFilesStudents.data.data.forEach((element) => {
@@ -578,7 +578,7 @@ export default {
       const responseTestExam = await this.axios.get(
         `${process.env.VUE_APP_API}/knowledgeTestAndQualificationExams?searchGlobal=${this.search}`
       );
-      console.log("responseTestExam", responseTestExam.data.data);
+      // console.log("responseTestExam", responseTestExam.data.data);
       if (responseTestExam.data.data) {
         this.result = true;
         responseTestExam.data.data.forEach((element) => {
@@ -596,7 +596,7 @@ export default {
       const responseStudentWorks = await this.axios.get(
         `${process.env.VUE_APP_API}/studentWorks?searchGlobal=${this.search}`
       );
-      console.log("responseStudentWorks", responseStudentWorks.data.data);
+      // console.log("responseStudentWorks", responseStudentWorks.data.data);
       if (responseStudentWorks.data.data) {
         this.result = true;
         responseStudentWorks.data.data.forEach((element) => {
@@ -614,7 +614,7 @@ export default {
       const responseNews = await this.axios.get(
         `${process.env.VUE_APP_API}/news?searchGlobal=${this.search}`
       );
-      console.log("responseNews", responseNews.data.data);
+      // console.log("responseNews", responseNews.data.data);
       if (responseNews.data.data) {
         this.result = true;
         responseNews.data.data.forEach((element) => {
@@ -646,10 +646,10 @@ export default {
       const responseThesisAndResearchs = await this.axios.get(
         `${process.env.VUE_APP_API}/thesisAndResearchs?searchGlobal=${this.search}`
       );
-      console.log(
-        "responseThesisAndResearchs",
-        responseThesisAndResearchs.data.data
-      );
+      // console.log(
+      //   "responseThesisAndResearchs",
+      //   responseThesisAndResearchs.data.data
+      // );
       if (responseThesisAndResearchs.data.data) {
         this.result = true;
         responseThesisAndResearchs.data.data.forEach((element) => {
@@ -667,10 +667,10 @@ export default {
       const responseAcademicJournals = await this.axios.get(
         `${process.env.VUE_APP_API}/academicJournals?searchGlobal=${this.search}`
       );
-      console.log(
-        "responseAcademicJournals",
-        responseAcademicJournals.data.data
-      );
+      // console.log(
+      //   "responseAcademicJournals",
+      //   responseAcademicJournals.data.data
+      // );
       if (responseAcademicJournals.data.data) {
         this.result = true;
         responseAcademicJournals.data.data.forEach((element) => {
@@ -703,7 +703,7 @@ export default {
       const responseKnowledge = await this.axios.get(
         `${process.env.VUE_APP_API}/knowledgeLibraries?searchGlobal=${this.search}`
       );
-      console.log("responseKnowledge", responseKnowledge.data.data);
+      // console.log("responseKnowledge", responseKnowledge.data.data);
       if (responseKnowledge.data.data) {
         this.result = true;
         responseKnowledge.data.data.forEach((element) => {
@@ -721,7 +721,7 @@ export default {
       const responseAnnualReports = await this.axios.get(
         `${process.env.VUE_APP_API}/annualReports?searchGlobal=${this.search}`
       );
-      console.log("responseAnnualReports", responseAnnualReports.data.data);
+      // console.log("responseAnnualReports", responseAnnualReports.data.data);
       if (responseAnnualReports.data.data) {
         this.result = true;
         responseAnnualReports.data.data.forEach((element) => {
@@ -739,7 +739,7 @@ export default {
       const responseTeacherDetails = await this.axios.get(
         `${process.env.VUE_APP_API}/teacherDetails?searchGlobal=${this.search}`
       );
-      console.log("responseTeacherDetails", responseTeacherDetails.data.data);
+      // console.log("responseTeacherDetails", responseTeacherDetails.data.data);
       if (responseTeacherDetails.data.data) {
         this.result = true;
         responseTeacherDetails.data.data.forEach((element) => {
@@ -758,7 +758,7 @@ export default {
       const responseAwards = await this.axios.get(
         `${process.env.VUE_APP_API}/awards?searchGlobal=${this.search}`
       );
-      console.log("responseAwards", responseAwards.data.data);
+      // console.log("responseAwards", responseAwards.data.data);
       if (responseAwards.data.data) {
         this.result = true;
         responseAwards.data.data.forEach((element) => {
@@ -782,7 +782,7 @@ export default {
       const responseMou = await this.axios.get(
         `${process.env.VUE_APP_API}/mou?searchGlobal=${this.search}`
       );
-      console.log("responseMou", responseMou.data.data);
+      // console.log("responseMou", responseMou.data.data);
       if (responseMou.data.data) {
         this.result = true;
         responseMou.data.data.forEach((element) => {
@@ -795,7 +795,7 @@ export default {
         });
       }
 
-      console.log("this.items", this.items);
+      // console.log("this.items", this.items);
     },
   },
 };

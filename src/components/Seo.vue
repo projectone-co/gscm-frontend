@@ -38,9 +38,9 @@
           window.title = meta.title
           this.$nextTick(() => {
             this.$meta().refresh()
-            if (!window.prerenderReady) {
-              window.prerenderReady = true
-            }
+            // if (!window.prerenderReady) {
+            //   window.prerenderReady = true
+            // }
           })
         }
       }

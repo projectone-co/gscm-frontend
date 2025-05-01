@@ -285,7 +285,7 @@ export default {
   methods: {
     onKeydown(event) {
       if (event.key === "Enter") {
-        console.log(event);
+        // console.log(event);
         this.handleSearch();
         event.preventDefault();
       }
@@ -298,7 +298,7 @@ export default {
       this.itemsToShow += 8;
     },
     handleEnter(e) {
-      console.log(e.key);
+      // console.log(e.key);
     },
     handleSearch() {
       if (!this.search) {
@@ -309,11 +309,11 @@ export default {
             item.title_th.toLowerCase().includes(this.search.toLowerCase()) ||
             item.title_en.toLowerCase().includes(this.search.toLowerCase())
         );
-        console.log("filterTH", filterTH);
+        // console.log("filterTH", filterTH);
 
         this.items = [];
         this.items = filterTH;
-        console.log("this.items", this.items);
+        // console.log("this.items", this.items);
       }
 
       // this.offset = 1;
@@ -363,7 +363,7 @@ export default {
           ? [...this.items, ...response.data.data]
           : response.data.data;
 
-      console.log("this.items", this.items);
+      // console.log("this.items", this.items);
       this.itemsAll = response.data.data;
     },
     gotodetail(id) {

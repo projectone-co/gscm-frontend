@@ -286,7 +286,7 @@ export default {
       const response = await this.axios.get(
         `${process.env.VUE_APP_API}/awards?years_received=${this.selectedYear}`
       );
-      console.log("awards", response.data.data);
+      // console.log("awards", response.data.data);
       this.awards = response.data.data;
       this.awards.reverse();
     },
@@ -295,7 +295,7 @@ export default {
       const response = await this.axios.get(
         `${process.env.VUE_APP_API}/awards`
       );
-      console.log("getAllYears", response.data.data);
+      // console.log("getAllYears", response.data.data);
       this.yearItems = response.data.data;
       this.yearItems.reverse();
 
@@ -315,7 +315,7 @@ export default {
 
       this.itemsSelectyear = getYears.filter((x) => !!x);
 
-      console.log("this.itemsSelectyear", this.itemsSelectyear);
+      // console.log("this.itemsSelectyear", this.itemsSelectyear);
     },
     async opendialogdetail(award) {
       let itemEdit = {};
@@ -326,7 +326,7 @@ export default {
       // this.selectedAward = award;
       itemEdit.pathPic.unshift({ path: itemEdit.img_url });
       this.selectedAward = itemEdit;
-      console.log("this.selectedAward", this.selectedAward);
+      // console.log("this.selectedAward", this.selectedAward);
       this.dialogdetail = true;
     },
     goback() {

@@ -227,13 +227,13 @@ export default {
 
       this.item = response.data.data[0];
       this.downloads = response.data.data[0].filesAnnounces;
-      console.log("items", this.item);
+      // console.log("items", this.item);
     },
     gotodetail(id) {
       this.$router.push(`/newsdetail?id=${id}&type=${this.newstype}`);
     },
     handleScroll() {
-      console.log("window.pageYOffset", window.pageYOffset);
+      // console.log("window.pageYOffset", window.pageYOffset);
       this.pageYOffset = window.pageYOffset;
       if (window.pageYOffset > 465) {
         // ซ่อน banner เปิด nav

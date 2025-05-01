@@ -359,7 +359,7 @@ export default {
       const response = await this.axios.get(
         `${process.env.VUE_APP_API}/orders/` + this.id
       );
-      console.log("responseById", response.data.data);
+      // console.log("responseById", response.data.data);
       const data = response.data.data;
       this.name = data.name;
       this.tel = data.tel;
@@ -414,7 +414,7 @@ export default {
       }
 
       this.totalText = bahttext(this.paymentPrice);
-      console.log("word", this.totalText);
+      // console.log("word", this.totalText);
       this.paymentStatus = data.paymentStatus;
 
       if (data.paymentStatus == "WAITING_PAYMENT") {
@@ -473,10 +473,10 @@ export default {
       for (let index = 0; index < this.itemperpage; index++) {
         pagearr.push(array[startitemindex + index]);
       }
-      console.log(
-        "Page ===",
-        pagearr.filter((v) => !!v)
-      );
+      // console.log(
+      //   "Page ===",
+      //   pagearr.filter((v) => !!v)
+      // );
       return pagearr.filter((v) => !!v);
     },
     addCommas(nStr) {
@@ -501,7 +501,7 @@ export default {
 
     const urlParams = this.$route.query;
     this.id = urlParams.id;
-    console.log("urlParams", urlParams);
+    // console.log("urlParams", urlParams);
     this.getOrderById();
   },
 };

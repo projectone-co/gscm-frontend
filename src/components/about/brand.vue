@@ -35,7 +35,7 @@
         <v-row justify="center">
           <v-col cols="12" md="12">
             <span style="font-weight: 600; font-size: 42px; line-height: 60px">
-              “{{ $t("firmlyAllRounder") }}”
+              "{{ $t("firmlyAllRounder") }}"
             </span>
           </v-col>
           <v-col
@@ -86,7 +86,7 @@
         class="tw-py-[56px] sm:tw-py-[64px] md:tw-py-[100px] tw-relative"
       >
         <span style="font-weight: 600; font-size: 36px; line-height: 52px">
-          “{{ $t("communicateAndCreative") }}”
+          "{{ $t("communicateAndCreative") }}"
         </span>
         <br />
         <br />
@@ -313,7 +313,7 @@ export default {
   watch: {},
   methods: {
     onClickDownload(url) {
-      console.log(url);
+      // console.log(url);
       window.open(url, "_blank");
     },
     goTo(val) {
@@ -323,14 +323,14 @@ export default {
       const response = await this.axios.get(
         `${process.env.VUE_APP_API}/identitys`
       );
-      console.log("identitys", response.data.data);
+      // console.log("identitys", response.data.data);
       this.items = response.data.data;
     },
     gotodetail(id) {
       this.$router.push(`/newsdetail?id=${id}&type=${this.newstype}`);
     },
     handleScroll() {
-      console.log("window.pageYOffset", window.pageYOffset);
+      // console.log("window.pageYOffset", window.pageYOffset);
       this.pageYOffset = window.pageYOffset;
       if (window.pageYOffset > 465) {
         // ซ่อน banner เปิด nav

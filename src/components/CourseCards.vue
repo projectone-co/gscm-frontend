@@ -185,7 +185,7 @@ export default {
 
         // 'http://localhost:8081/types/'
       );
-      console.log("getAllCourse", response.data.data);
+      // console.log("getAllCourse", response.data.data);
       this.cardItems = response.data.data;
       this.$emit("setcourses", this.cardItems);
     },

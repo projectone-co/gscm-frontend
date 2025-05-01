@@ -379,7 +379,7 @@ export default {
 
         // 'http://localhost:8081/types/'
       );
-      console.log("getAll News", response.data.data);
+      // console.log("getAll News", response.data.data);
       this.items = response.data.data;
       // this.imgUrl = response.data.data.imgUrl;
       // for (let i in this.items) {
@@ -402,7 +402,7 @@ export default {
         .find((obj) => obj.value == type).param;
       // this.$router.push(`/newsdetail?id=${id}&type=${type}`);
       // window.open(`/news/${pathParam}/${id}`, "_blank");
-      console.log("item", item);
+      // console.log("item", item);
 
       let id = item.id;
       let title_en = item.title_en;

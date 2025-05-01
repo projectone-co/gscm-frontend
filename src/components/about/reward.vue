@@ -125,14 +125,14 @@ export default {
       const response = await this.axios.get(
         `${process.env.VUE_APP_API}/news?type=${this.newstype}`
       );
-      console.log("news", response.data.data);
+      // console.log("news", response.data.data);
       this.items = response.data.data;
     },
     gotodetail(id) {
       this.$router.push(`/staff-detail?id=${id}`);
     },
     handleScroll() {
-      console.log("window.pageYOffset", window.pageYOffset);
+      // console.log("window.pageYOffset", window.pageYOffset);
       this.pageYOffset = window.pageYOffset;
       if (window.pageYOffset > 465) {
         // ซ่อน banner เปิด nav

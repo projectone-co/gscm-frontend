@@ -481,7 +481,7 @@ export default {
         `${process.env.VUE_APP_API}/reports/getUserCharts?year=${this.yearPicker}&month=${this.monthPicker}&day=${selectedDate}`
       );
 
-      console.log("response.data.data;", responseUserCharts.data.data);
+      // console.log("response.data.data;", responseUserCharts.data.data);
       let userData = []
       responseUserCharts.data.data.forEach((user) => {
         userData.push(user.total)

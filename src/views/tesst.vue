@@ -39,13 +39,13 @@ export default {
       const response = await this.axios.get("/brands");
 
       this.brands = response.data.data;
-      console.log("response", response.data.data);
+      // console.log("response", response.data.data);
     },
     async getAllProblemAdvise() {
       const response = await this.axios.get(`/problemAdviseById?problemId=${this.brand}`);
 
       this.brands = response.data.data;
-      console.log("response", response.data.data);
+      // console.log("response", response.data.data);
     },
   },
 };

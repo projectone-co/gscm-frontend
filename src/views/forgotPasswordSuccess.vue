@@ -56,7 +56,7 @@ export default {
         axios
           .post(`${process.env.VUE_APP_API}/users/resetTokenPassword`, data)
           .then((response) => {
-            console.log("response", response);
+            // console.log("response", response);
             if (response.data.response_status === "ERROR") {
               this.$swal.fire({
                 showConfirmButton: false,

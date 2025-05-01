@@ -90,7 +90,7 @@ export default {
       const response = await this.axios.get(
         `${process.env.VUE_APP_API}/annualReports/${this.$route.query.id}`
       );
-      console.log("annualReports", response.data.data);
+      // console.log("annualReports", response.data.data);
       this.anualData = response.data.data;
       this.items = this.anualData.documentFiles;
     },

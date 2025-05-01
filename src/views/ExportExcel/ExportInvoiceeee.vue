@@ -244,10 +244,10 @@ export default {
   },
   components: {},
   created() {
-      console.log('sdsdsdsds');
+      // console.log('sdsdsdsds');
     const urlParams = this.$route.query;
     this.taskId = urlParams.taskId;
-    console.log("urlParams", urlParams);
+    // console.log("urlParams", urlParams);
     this.getOrderById()
   },
   methods: {
@@ -267,7 +267,7 @@ export default {
         auth
         // +this.orderId
       );
-      console.log("responseById", response.data.data);
+      // console.log("responseById", response.data.data);
       const data = response.data.data;
       this.name = data.custName + " " + data.custLastName;
       this.custAddress = data.custAddress;
@@ -283,10 +283,10 @@ export default {
           data.carBrand.name + " " + data.carModel.name + " " + data.plateNo,
       });
       this.orderProducts.push({ description: this.valveAmount });
-      console.log(
-        "this.orderProducts.description",
-        this.orderProducts.description
-      );
+      // console.log(
+      //   "this.orderProducts.description",
+      //   this.orderProducts.description
+      // );
       this.valveImages = data.valveImages;
       //   for (let i in data.valveImages) {
       //     if (valveImages[i].vBefore == true) {
@@ -340,10 +340,10 @@ export default {
       for (let index = 0; index < this.itemperpage; index++) {
         pagearr.push(array[startitemindex + index]);
       }
-      console.log(
-        "Page ===",
-        pagearr.filter((v) => !!v)
-      );
+      // console.log(
+      //   "Page ===",
+      //   pagearr.filter((v) => !!v)
+      // );
       return pagearr.filter((v) => !!v);
     },
     addCommas(nStr) {

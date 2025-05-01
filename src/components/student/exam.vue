@@ -227,7 +227,7 @@ export default {
 
       this.item = response.data.data[0];
       this.downloads = this.item.filesAnnounces;
-      console.log("items", this.item);
+      // console.log("items", this.item);
     },
     gotodetail(id) {
       this.$router.push(`/newsdetail?id=${id}&type=${this.newstype}`);

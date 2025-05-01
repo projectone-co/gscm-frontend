@@ -262,7 +262,7 @@ export default {
         auth
       );
 
-      console.log("response alumni", response.data.records);
+      // console.log("response alumni", response.data.records);
       // this.alumniData = response.data.records;
       const result = response.data.records.filter(
         (word) => word.fields.status == "Published"
@@ -271,7 +271,7 @@ export default {
       for (let index = 0; index < 4; index++) {
         this.alumniData.push(result[index]);
       }
-      console.log("this.alumniData", this.alumniData);
+      // console.log("this.alumniData", this.alumniData);
     },
     gotoalumnilist() {
       this.$router.push("alumnilist");
@@ -290,7 +290,7 @@ export default {
       const response = await this.axios.get(
         `${process.env.VUE_APP_API}/news?type=${this.newstype}&status=เปิดใช้งาน`
       );
-      console.log("news", response.data.data);
+      // console.log("news", response.data.data);
       this.items = response.data.data;
     },
     gotodetail(id) {

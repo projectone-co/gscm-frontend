@@ -28,6 +28,22 @@ export default {
         window.scrollTo({ top: 0, behavior: "smooth" });
       });
     },
+    activeRequests(newVal) {
+      // console.log(newVal)
+      this.loading = newVal > 0;
+      if (newVal === 0) {
+        // console.log("All network requests completed");
+        if (!window.prerenderReady) {
+        
+          window.prerenderReady = true
+        }
+      }
+    },
+  },
+  computed: {
+    activeRequests() {
+      return this.$requestTracker.activeRequests;
+    },
   },
   components: { Seo, CookieLaw },
 };

@@ -47,7 +47,7 @@ export default {
       this.$emit("input", val);
     },
     onSearch() {
-      console.log("this.currentValue", this.currentValue);
+      // console.log("this.currentValue", this.currentValue);
       this.$emit("onSearch", this.currentValue);
     },
     clear() {

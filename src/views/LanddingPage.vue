@@ -136,7 +136,7 @@ export default {
       const response = await this.axios.get(
         `${process.env.VUE_APP_API}/welcomePops`
       );
-      console.log("responsewelcomepopup", response.data.data[0]);
+      // console.log("responsewelcomepopup", response.data.data[0]);
       this.welcomepopupdata = response.data.data[0];
       if (this.welcomepopupdata.img_url) {
         this.menuwelcome = true;

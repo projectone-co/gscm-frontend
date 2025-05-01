@@ -680,7 +680,7 @@ export default {
   },
   mounted() {
     window.addEventListener("scroll", this.handleScroll);
-    console.log("selected", this.$route.query.selected);
+    // console.log("selected", this.$route.query.selected);
     // this.selectedtab = this.$route.query.selected
     //   ? this.$route.query.selected
     //   : 1;
@@ -691,7 +691,7 @@ export default {
       const response = await this.axios.get(
         `${process.env.VUE_APP_API}/news?type=${this.newstype}`
       );
-      console.log("news", response.data.data);
+      // console.log("news", response.data.data);
       this.items = response.data.data;
     },
     gotodetail(id) {
@@ -701,7 +701,7 @@ export default {
       this.$router.push(`journal`);
     },
     handleScroll() {
-      console.log("window.pageYOffset", window.pageYOffset);
+      // console.log("window.pageYOffset", window.pageYOffset);
       this.pageYOffset = window.pageYOffset;
       if (window.pageYOffset > 465) {
         // ซ่อน banner เปิด nav

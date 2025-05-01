@@ -332,7 +332,7 @@ export default {
       const response = await this.axios.get(
         `${process.env.VUE_APP_API}/studentWorks`
       );
-      console.log("news", response.data.data);
+      // console.log("news", response.data.data);
       this.items = response.data.data;
     },
     gotodetail(id) {

@@ -193,8 +193,8 @@ export default {
   methods: {
     async DragItems(val) {
       this.loading = true;
-      console.log("this.itemsssssss", this.items);
-      console.log("beforeAPI", val);
+      // console.log("this.itemsssssss", this.items);
+      // console.log("beforeAPI", val);
       var user = JSON.parse(
         Decode.decode(localStorage.getItem("userBebraveWeb"))
       );
@@ -206,7 +206,7 @@ export default {
         val,
         auth
       );
-      console.log("afterAPI", response);
+      // console.log("afterAPI", response);
 
       this.items = response.data.data;
       // for (let i in this.items) {
@@ -224,18 +224,18 @@ export default {
         auth
         // 'http://localhost:8081/types/'
       );
-      console.log("getAllbannerpe", response.data.data);
+      // console.log("getAllbannerpe", response.data.data);
       this.items = response.data.data;
       // this.imgUrl = response.data.data.imgUrl;
       for (let i in this.items) {
         this.items[i].count = parseInt(i) + 1;
       }
-      console.log("itemBefore", this.items);
-      console.log("itemAfter", this.items);
+      // console.log("itemBefore", this.items);
+      // console.log("itemAfter", this.items);
       this.loading = false;
     },
     UpdateBanner(val) {
-      console.log("val", val);
+      // console.log("val", val);
       localStorage.setItem("Bannerdata", Encode.encode(val));
       this.$router.push("formlist");
     },
@@ -261,7 +261,7 @@ export default {
             `${process.env.VUE_APP_API}/banner/` + val.id,
             auth
           );
-          console.log(response);
+          // console.log(response);
 
           this.$swal.fire({
             icon: "success",

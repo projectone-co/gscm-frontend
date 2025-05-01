@@ -40,7 +40,7 @@ export default {
   },
   watch: {
     selectedtab(val) {
-      console.log(val);
+      // console.log(val);
       this.$emit("input", val);
     },
     value(val) {
@@ -48,7 +48,7 @@ export default {
     },
   },
   mounted() {
-    console.log(this.$attrs);
+    // console.log(this.$attrs);
     this.selectedtab = this.$attrs.value;
   },
 };

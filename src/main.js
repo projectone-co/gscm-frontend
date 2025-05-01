@@ -93,6 +93,29 @@ Vue.use(VueQuillEditor /* { default global options } */);
 
 Vue.component("downloadExcel", JsonExcel);
 Vue.use(VueAxios, axios);
+
+
+const requestTracker = Vue.observable({ activeRequests: 0 });
+
+axios.interceptors.request.use((config) => {
+  requestTracker.activeRequests++;
+  return config;
+});
+
+axios.interceptors.response.use(
+  (response) => {
+    requestTracker.activeRequests--;
+    return response;
+  },
+  (error) => {
+    requestTracker.activeRequests--;
+    return Promise.reject(error);
+  }
+);
+
+Vue.prototype.$requestTracker = requestTracker;
+
+
 Vue.use(Antd);
 Vue.use(SequentialEntrance);
 Vue.use(VueSweetalert2);

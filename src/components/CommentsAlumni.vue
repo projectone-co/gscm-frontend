@@ -213,7 +213,7 @@ export default {
         `${process.env.VUE_APP_API}/studentComments?type=2`,
         auth
       );
-      console.log("getAllStudentComment", response.data.data);
+      // console.log("getAllStudentComment", response.data.data);
       this.items = response.data.data;
     },
   },
